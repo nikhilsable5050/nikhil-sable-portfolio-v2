@@ -23,7 +23,7 @@ const details = [
   { icon: FiMapPin, title: "Location", content: SITE.location },
   { icon: FiMail, title: "Email", content: SITE.email },
   { icon: FiPhone, title: "Phone", content: SITE.phone },
-  { icon: FiBook, title: "Education", content: "B.E. E&TC (2022–2026) · CGPA 9.25/10" },
+  { icon: FiBook, title: "Education", content: "B.E. COMP (2022–2026) · CGPA 8.05/10" },
 ];
 
 const skills = ["Spring Boot", "Java", "React.js", "Next.js", "Jenkins", "CI/CD", "MySQL", "MongoDB"];
@@ -33,7 +33,7 @@ export default function AboutSection() {
     <BrutalSection id="about" bg="#F2F5F3">
       <SectionHeader
         eyebrow="About me"
-        title="Who is Aditya?"
+        title="Who is Nikhil?"
         subtitle="Full stack developer & test automation engineer — I love turning ideas into bold, usable products."
         accent="#4A9B5A"
       />
@@ -47,7 +47,7 @@ export default function AboutSection() {
         >
           <BrutalCard bg="#F0EBE0" tilt className="p-3 sm:p-4">
             <div className="relative aspect-square overflow-hidden rounded-xl brutal-border">
-              <Image src="/2.jpg" alt="Aditya Thodsare" fill priority
+              <Image src="/22.jpg" alt="Nikhil Sable" fill priority
                 sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top" />
             </div>
           </BrutalCard>
