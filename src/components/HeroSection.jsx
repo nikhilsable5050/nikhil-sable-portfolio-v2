@@ -44,11 +44,6 @@ export default function HeroSection({ handleNavClick }) {
             <span className="rounded-md bg-[#E0E8F0] px-1.5 brutal-border border-[#2D2D2D]/20">
               Spring Boot & React
             </span>
-            , IoT platforms like{" "}
-            <span className="rounded-md bg-[#F0EBE0] px-1.5 brutal-border border-[#2D2D2D]/20">
-              SAFE-V
-            </span>
-            , and AI test analytics dashboards.
           </p>
 
           {/* Only 2 CTA buttons — clean */}
