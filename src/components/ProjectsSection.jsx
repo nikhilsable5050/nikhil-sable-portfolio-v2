@@ -28,6 +28,24 @@ const TABS = [
 ];
 
 const projects = [
+    {
+    id: "ecommerce-platform",
+    title: "Nexus Retail Ecommerce Platform – Full Stack App",
+    description:
+      "Nexus Retail is a modern full-stack e-commerce platform that enables users to browse products, manage carts, and place orders through a responsive and intuitive shopping experience.",
+    technologies: [
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "React.js",
+    ],
+    image: "/nexus.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/nexus-retail",
+    categories: ["fullstack"],
+    featured: true,
+    cardColor: "#FFF8ED",
+  },
   {
     id: "book-management-system",
     title: "Book Management System – Full Stack App",
@@ -46,7 +64,6 @@ const projects = [
     demoLink:
       "https://book-management-system-nikhil.netlify.app/",
     categories: ["fullstack"],
-    featured: true,
     cardColor: "#FFF8ED",
   },
   {
