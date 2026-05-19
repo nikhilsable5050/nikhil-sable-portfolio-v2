@@ -14,9 +14,9 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: "Aditya Thodsare | Portfolio",
+  title: "Nikhil Sable | Portfolio",
   description:
-    "Full stack developer, IoT enthusiast, and test automation engineer — playful portfolio.",
+    "Full stack developer and test automation engineer — playful portfolio.",
 };
 
 export default function RootLayout({ children }) {
