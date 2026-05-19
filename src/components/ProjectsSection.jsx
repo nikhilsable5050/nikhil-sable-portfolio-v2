@@ -1,78 +1,226 @@
 "use client";
 
-import { FiGithub, FiExternalLink, FiCpu, FiMessageSquare, FiWifi, FiLayers } from "react-icons/fi";
+import {
+  FiGithub,
+  FiExternalLink,
+  FiCpu,
+  FiWifi,
+  FiLayers,
+} from "react-icons/fi";
 import { useState } from "react";
 import Image from "next/image";
-import { BrutalSection, SectionHeader, BrutalCard, BrutalBadge, BrutalButton, cn } from "./ui/BrutalUI";
+import {
+  BrutalSection,
+  SectionHeader,
+  BrutalCard,
+  BrutalBadge,
+  BrutalButton,
+  cn,
+} from "./ui/BrutalUI";
 
 const TABS = [
   { id: "all", label: "All", icon: FiLayers },
-  { id: "iot", label: "IoT", icon: FiWifi },
   { id: "fullstack", label: "Full Stack" },
   { id: "backend", label: "Backend" },
   { id: "frontend", label: "Frontend" },
+  { id: "ai", label: "AI" },
+  { id: "java", label: "Java" },
 ];
 
 const projects = [
   {
-    id: "safev",
-    title: "SAFE-V",
-    description: "IoT-powered vehicle safety platform with live location tracking, accident detection, and automated emergency alerts. Full-stack app with real-time dashboards and WebSocket updates.",
-    technologies: ["IoT", "Next.js", "Spring Boot", "MySQL", "WebSocket", "ESP32"],
-    image: "/image.png",
-    githubLink: "https://github.com/adityathodsare/safev-frontend-nextjs",
-    demoLink: "https://safev.vercel.app",
-    categories: ["iot", "fullstack"],
+    id: "book-management-system",
+    title: "Book Management System – Full Stack App",
+    description:
+      "Full-stack application built with Spring Boot and React, providing CRUD operations for managing books through REST APIs.",
+    technologies: [
+      "Spring Boot",
+      "REST API",
+      "Spring Data JPA",
+      "PostgreSQL",
+      "React.js",
+    ],
+    image: "/booksys.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/book-application",
+    demoLink:
+      "https://book-management-system-nikhil.netlify.app/",
+    categories: ["fullstack"],
     featured: true,
     cardColor: "#FFF8ED",
   },
   {
-    id: "healthorbit",
-    title: "HealthOrbit AI",
-    description: "AI-powered health platform with personalized fitness recommendations and symptom analysis. Event-driven microservices with RabbitMQ, Eureka, Gemini API, MongoDB, and PostgreSQL.",
-    technologies: ["Spring Boot", "RabbitMQ", "Next.js", "Gemini API", "Microservices"],
-    image: "/healthorbit.png",
-    githubLinks: [
-      { label: "Frontend", url: "https://github.com/adityathodsare/healthOrbit-Ai" },
-      { label: "Backend", url: "https://github.com/adityathodsare/microservices-project-health-fitness-ai" },
-    ],
-    demoLink: "https://www.linkedin.com/posts/aditya-thodsare-475366289_springboot-microservices-rabbitmq-activity-7349101989458235393-2Av1",
-    architectureLink: "https://app.eraser.io/workspace/bIMvUVxGVW2MvIYOgsOc?origin=share&elements=uKAcreQNH_YZDVULBAVyEA",
-    categories: ["fullstack"],
-    cardColor: "#F5F0FA",
-  },
-  {
-    id: "printify",
-    title: "Printify",
-    description: "Print shop management with room-based jobs, secure document uploads, and anonymous WebSocket chat.",
-    technologies: ["React.js", "Vite", "Spring Boot", "WebSocket", "MongoDB"],
-    image: "/printify.png",
-    githubLink: "https://github.com/adityathodsare/project-Printify",
-    demoLink: "https://www.linkedin.com/posts/aditya-thodsare-475366289_webapp-printify-springboot-activity-7284180807630368768-WPDF",
-    categories: ["fullstack"],
+    id: "pizza-bill-generator",
+    title: "Pizza Bill Generator – Java OOP Project",
+    description:
+      "Java console application demonstrating object-oriented programming concepts such as inheritance, encapsulation, and polymorphism.",
+    technologies: ["Java", "OOP"],
+    image: "/pizzagen.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/pizza-bill-generator",
+    categories: ["java", "backend"],
     cardColor: "#F0F5FF",
   },
   {
-    id: "usermanagement",
-    title: "User Management with JWT",
-    description: "JWT auth, role-based access, encrypted passwords, refresh token rotation, and audit logging via REST APIs.",
-    technologies: ["Spring Security", "Spring Boot", "JWT", "REST APIs", "MySQL"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    githubLink: "https://github.com/adityathodsare/spring-security-user-management-with-JWT",
-    demoLink: "https://www.linkedin.com/posts/aditya-thodsare-475366289_springboot-springsecurity-jwt-activity-7308605498835054596-ANP8",
+    id: "spring-boot-todo-app",
+    title: "Spring Boot Todo List",
+    description:
+      "Backend-driven Todo application with CRUD operations and database persistence using Spring Boot and JPA.",
+    technologies: [
+      "Spring Boot",
+      "Thymeleaf",
+      "Bootstrap",
+      "PostgreSQL",
+    ],
+    image: "/thumbnail1.jpg",
+    githubLink:
+      "https://github.com/nikhilsable5050/spring-boot-todo-app",
+    demoLink:
+      "https://spring-boot-todo-app-mynq.onrender.com/",
+    categories: ["backend"],
+    cardColor: "#F5F0FA",
+  },
+  {
+    id: "weather-service-api",
+    title: "Weather Service API",
+    description:
+      "Production-ready Spring Boot backend application with JWT and Google OAuth2 authentication, role-based authorization, caching, and external weather API integration.",
+    technologies: [
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "OAuth2",
+      "MySQL",
+      "Redis",
+      "Swagger",
+    ],
+    image: "/weatherproject.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/weather-service",
     categories: ["backend"],
     cardColor: "#FAF0EE",
   },
   {
-    id: "develevate",
-    title: "DevElevate",
-    description: "Course platform built with Next.js and TypeScript — progress tracking, interactive exercises, and community discussions.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    image: "/develevate.png",
-    githubLink: "https://github.com/adityathodsare/devElevate-nexjs-frontend",
-    demoLink: "https://dev-elevate-nexjs-frontend.vercel.app/",
-    categories: ["frontend"],
+    id: "ai-background-remover",
+    title: "AI Background Remover",
+    description:
+      "Full-stack SaaS application for AI-based image background removal with authentication and API integration.",
+    technologies: [
+      "Spring Boot",
+      "React.js",
+      "Tailwind CSS",
+      "MySQL",
+      "Full Stack",
+    ],
+    image: "/thumbnail2.jpg",
+    githubLink:
+      "https://github.com/nikhilsable5050/ai-bg-removal-saas",
+    categories: ["fullstack", "ai"],
     cardColor: "#F0FAF4",
+  },
+  {
+    id: "student-management-system",
+    title: "Student Management System",
+    description:
+      "Student management application with authentication, CRUD operations, pagination, and validation built using Spring Boot, Thymeleaf, and MySQL.",
+    technologies: [
+      "Spring Boot",
+      "Spring Security",
+      "Thymeleaf",
+      "MySQL",
+      "Spring Data JPA",
+    ],
+    image: "/sms.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/student-management-system-springboot",
+    categories: ["fullstack"],
+    cardColor: "#EEF4FF",
+  },
+  {
+    id: "ghibli-ai-art-generator",
+    title: "Ghibli AI Art Generator",
+    description:
+      "Full-stack AI art generator with image upload, AI processing, and secure backend integration.",
+    technologies: [
+      "React.js",
+      "Spring Boot",
+      "Spring Security",
+      "Feign Client",
+      "MySQL",
+      "Stability AI API",
+    ],
+    image: "/ghibli.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/ghibli-ai-art-generator",
+    categories: ["fullstack", "ai"],
+    cardColor: "#FFF7E6",
+  },
+  {
+    id: "portfolio-v2",
+    title: "Personal Portfolio Website V2",
+    description:
+      "Modern portfolio website built with Next.js, React.js, Tailwind CSS, and Framer Motion with smooth animations.",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    image: "/v2.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/nikhil-sable-portfolio-v2",
+    categories: ["frontend"],
+    cardColor: "#F3F8FF",
+  },
+  {
+    id: "bank-customer-api",
+    title: "Bank Customer Management API",
+    description:
+      "A RESTful backend application built with Spring Boot and H2 Database that provides complete CRUD operations for managing bank customers.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "H2 Database",
+    ],
+    image: "/bank.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/bank-customer-api",
+    categories: ["backend"],
+    cardColor: "#F3F8FF",
+  },
+    {
+    id: "job-app",
+    title: "Job Application Tracker",
+    description:
+      "A simple Spring Boot application that allows users to add and view job posts using in-memory storage with ArrayList.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "JSP",
+      "Maven",
+    ],
+    image: "/job.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/job-app-portal",
+    categories: ["fullstack"],
+    cardColor: "#F3F8FF",
+  },
+      {
+    id: "money-manager",
+    title: "Money Manager",
+    description:
+      "Secure expense management application with user authentication, transaction tracking, and interactive financial dashboards.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "JSP",
+      "Maven",
+    ],
+    image: "/money.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/money-manager",
+    categories: ["fullstack"],
+    cardColor: "#F3F8FF",
   },
 ];
 
@@ -84,20 +232,23 @@ function matchesTab(project, tab) {
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState("all");
   const [expandedProject, setExpandedProject] = useState(null);
-  const filtered = projects.filter((p) => matchesTab(p, activeTab));
+
+  const filtered = projects.filter((project) =>
+    matchesTab(project, activeTab)
+  );
 
   return (
     <BrutalSection id="projects" bg="#F5F2F0">
       <SectionHeader
         eyebrow="Portfolio"
         title="Featured Projects"
-        subtitle="Tap a category — SAFE-V shows up in both IoT & Full Stack!"
+        subtitle="A collection of projects built during my journey into backend and full-stack development."
         accent="#C08B3E"
       />
 
-      {/* Filter tabs */}
+      {/* Filter Tabs */}
       <div
-        className="mb-10 flex flex-nowrap justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-hide sm:flex-wrap"
+        className="mb-10 flex flex-nowrap gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center"
         role="tablist"
         aria-label="Project categories"
       >
@@ -121,91 +272,146 @@ export default function ProjectsSection() {
         ))}
       </div>
 
+      {/* Project Cards */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {filtered.length === 0 ? (
-          <p className="col-span-full py-12 text-center font-bold">No projects in this category yet.</p>
-        ) : (
-          filtered.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              expanded={expandedProject === project.id}
-              onToggle={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
-            />
-          ))
-        )}
+        {filtered.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            expanded={expandedProject === project.id}
+            onToggle={() =>
+              setExpandedProject(
+                expandedProject === project.id ? null : project.id
+              )
+            }
+          />
+        ))}
       </div>
     </BrutalSection>
   );
 }
 
 function ProjectCard({ project, expanded, onToggle }) {
-  const isExternal = project.image.startsWith("http");
+  const isExternal =
+    typeof project.image === "string" &&
+    project.image.startsWith("http");
 
   return (
-    <BrutalCard bg={project.cardColor} className={cn("overflow-hidden", project.featured && "lg:col-span-2")}>
-      <div className={cn("flex flex-col", project.featured && "lg:flex-row")}>
-        <div className={cn(
-          "relative h-44 shrink-0 overflow-hidden brutal-border border-x-0 border-t-0 sm:h-48",
-          project.featured && "lg:h-auto lg:min-h-[220px] lg:w-2/5 lg:border-b-0 lg:border-r-[2.5px]"
-        )}>
+    <BrutalCard
+      bg={project.cardColor}
+      className={cn(
+        "overflow-hidden",
+        project.featured && "lg:col-span-2"
+      )}
+    >
+      <div
+        className={cn(
+          "flex flex-col",
+          project.featured && "lg:flex-row"
+        )}
+      >
+        {/* Project Image */}
+        <div
+          className={cn(
+            "relative h-44 shrink-0 overflow-hidden brutal-border border-x-0 border-t-0 sm:h-48",
+            project.featured &&
+              "lg:h-auto lg:min-h-[220px] lg:w-2/5 lg:border-b-0 lg:border-r-[2.5px]"
+          )}
+        >
           {isExternal ? (
-            <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="h-full w-full object-cover"
+            />
           ) : (
-            <Image src={project.image} alt={project.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
           )}
         </div>
 
-        <div className={cn("flex flex-1 flex-col p-5 sm:p-6", project.featured && "lg:w-3/5")}>
+        {/* Project Content */}
+        <div
+          className={cn(
+            "flex flex-1 flex-col p-5 sm:p-6",
+            project.featured && "lg:w-3/5"
+          )}
+        >
           <div className="mb-2 flex flex-wrap items-center gap-2">
-            <h3 className="font-display text-xl font-extrabold">{project.title}</h3>
+            <h3 className="font-display text-xl font-extrabold">
+              {project.title}
+            </h3>
+
             {project.categories?.length > 1 && (
-              <BrutalBadge color="#E0E8F0">IoT + Full Stack</BrutalBadge>
+              <BrutalBadge color="#E0E8F0">
+                Multi-Category
+              </BrutalBadge>
             )}
           </div>
 
           <div className="mb-3 flex flex-wrap gap-1.5">
             {project.technologies.map((tech) => (
-              <BrutalBadge key={tech} color="#ffffff">{tech}</BrutalBadge>
+              <BrutalBadge key={tech} color="#ffffff">
+                {tech}
+              </BrutalBadge>
             ))}
           </div>
 
-          <p className={cn("mb-3 flex-1 text-sm font-semibold leading-relaxed", !expanded && "line-clamp-3")}>
+          <p
+            className={cn(
+              "mb-3 flex-1 text-sm font-semibold leading-relaxed",
+              !expanded && "line-clamp-3"
+            )}
+          >
             {project.description}
           </p>
 
           <button
             type="button"
             onClick={onToggle}
-            className="font-display mb-4 w-fit text-sm font-extrabold underline decoration-2 underline-offset-2 hover:text-[#C08B3E] transition-colors"
+            className="font-display mb-4 w-fit text-sm font-extrabold underline decoration-2 underline-offset-2 hover:text-[#C08B3E]"
           >
             {expanded ? "Show less" : "Read more"}
           </button>
 
-          {/* Project action buttons */}
+          {/* Buttons */}
           <div className="mt-auto flex flex-wrap gap-2">
-            {project.githubLinks
-              ? project.githubLinks.map((link) => (
-                  <BrutalButton key={link.label} href={link.url} external variant="secondary" className="!px-3 !py-2 text-xs">
-                    <FiGithub className="shrink-0" /> {link.label}
-                  </BrutalButton>
-                ))
-              : (
-                <BrutalButton href={project.githubLink} external variant="secondary" className="!px-3 !py-2 text-xs">
-                  <FiGithub className="shrink-0" /> Code
-                </BrutalButton>
-              )}
+            <BrutalButton
+              href={project.githubLink}
+              external
+              variant="secondary"
+              className="!px-3 !py-2 text-xs"
+            >
+              <FiGithub className="shrink-0" />
+              Code
+            </BrutalButton>
 
             {project.demoLink && (
-              <BrutalButton href={project.demoLink} external variant="primary" className="!px-3 !py-2 text-xs">
+              <BrutalButton
+                href={project.demoLink}
+                external
+                variant="primary"
+                className="!px-3 !py-2 text-xs"
+              >
                 <FiExternalLink className="shrink-0" />
-                {project.id === "safev" ? "Live app" : "Demo"}
+                Live Demo
               </BrutalButton>
             )}
 
             {project.architectureLink && (
-              <BrutalButton href={project.architectureLink} external variant="secondary" className="!px-3 !py-2 text-xs">
-                <FiCpu className="shrink-0" /> Arch
+              <BrutalButton
+                href={project.architectureLink}
+                external
+                variant="secondary"
+                className="!px-3 !py-2 text-xs"
+              >
+                <FiCpu className="shrink-0" />
+                Architecture
               </BrutalButton>
             )}
           </div>
