@@ -146,13 +146,13 @@ export function Mascot({ className = "" }) {
     <div className={cn("relative mx-auto w-full max-w-sm animate-float-soft", className)}>
       <div className="rounded-3xl brutal-border brutal-shadow-lg bg-white p-3 sm:p-4 rotate-[-1deg]">
         <div className="relative aspect-[3/4] overflow-hidden rounded-2xl brutal-border">
-          <img src="/1.png" alt="Aditya Thodsare" className="h-full w-full object-cover object-top" />
+          <img src="/1.jpeg" alt="Nikhil Sable" className="h-full w-full object-cover object-top" />
         </div>
         <div className="mt-3 px-1">
           <p className="font-display text-lg font-extrabold">{SITE.name}</p>
           <p className="text-sm font-bold text-[#2D2D2D]/55">Full Stack Developer · QA Engineer</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {["Spring Boot", "React", "Next.js", "IoT"].map((t) => (
+            {["Spring Boot", "React", "Next.js"].map((t) => (
               <BrutalBadge key={t} color="#F0EBE0">{t}</BrutalBadge>
             ))}
           </div>
