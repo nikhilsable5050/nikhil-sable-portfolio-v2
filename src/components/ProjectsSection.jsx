@@ -46,6 +46,25 @@ const projects = [
     featured: true,
     cardColor: "#FFF8ED",
   },
+{
+  id: "unique-gym",
+  title: "Unique Gym",
+  description:
+    "A modern premium fitness website built with React.js, Tailwind CSS, and Framer Motion featuring smooth animations, responsive design, BMI calculator, trainer showcase, and membership plans.",
+  technologies: [
+    "React.js",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Vite",
+  ],
+  image: "/gym.png",
+  githubLink:
+    "https://github.com/nikhilsable5050/unique-gym",
+  demoLink:
+    "https://unique-gym.netlify.app/",
+  categories: ["frontend"],
+  cardColor: "#FFF8ED",
+},
   {
     id: "book-management-system",
     title: "Book Management System – Full Stack App",
