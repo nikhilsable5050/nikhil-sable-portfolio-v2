@@ -186,8 +186,10 @@ const projects = [
     image: "/v2.png",
     githubLink:
       "https://github.com/nikhilsable5050/nikhil-sable-portfolio-v2",
-    categories: ["frontend"],
-    cardColor: "#F3F8FF",
+    demoLink:
+      "https://nikhil-sable-portfolio-v2.vercel.app/",
+      categories: ["frontend"],
+      cardColor: "#FFF8ED",
   },
   {
     id: "bank-customer-api",
