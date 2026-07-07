@@ -36,12 +36,36 @@ const projects = [
     technologies: [
       "Spring Boot",
       "Spring Security",
+      "JWT",
       "PostgreSQL",
       "React.js",
     ],
     image: "/nexus.png",
     githubLink:
       "https://github.com/nikhilsable5050/nexus-retail",
+    categories: ["fullstack"],
+    featured: true,
+    cardColor: "#FFF8ED",
+  },
+      {
+    id: "secure-notes",
+    title: "Secure Notes – Full Stack App",
+    description:
+      "A secure full-stack note-taking application for creating, managing, and organizing personal notes, featuring JWT authentication, OAuth2 social login, Multi-Factor Authentication (MFA), and role-based authorization.",
+    technologies: [
+      "Spring Boot",
+    "Spring Security",
+    "JWT",
+    "OAuth2",
+    "MFA",
+    "PostgreSQL",
+    "React.js",
+    ],
+    image: "/sn.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/secure-notes",
+    demoLink:
+      "https://secure-notes-ui.vercel.app/",
     categories: ["fullstack"],
     featured: true,
     cardColor: "#FFF8ED",
@@ -58,6 +82,7 @@ const projects = [
     "Vite",
   ],
   image: "/gym.png",
+  imageFit: "contain",
   githubLink:
     "https://github.com/nikhilsable5050/unique-gym",
   demoLink:
@@ -437,7 +462,7 @@ function ProjectCard({ project, expanded, onToggle }) {
                 className="!px-3 !py-2 text-xs"
               >
                 <FiExternalLink className="shrink-0" />
-                Live Demo
+                Live   
               </BrutalButton>
             )}
 
