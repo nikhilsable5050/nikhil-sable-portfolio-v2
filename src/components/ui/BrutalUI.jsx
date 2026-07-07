@@ -1,6 +1,7 @@
 "use client";
 
 import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
+import { SiLeetcode } from "react-icons/si";
 import { SITE } from "@/lib/site";
 
 export function cn(...classes) {
@@ -119,6 +120,7 @@ export function SocialLinks({ size = "md", showLabels = false }) {
   const pad = size === "lg" ? "p-3" : "p-2.5";
   const links = [
     { href: SITE.github, label: "GitHub", icon: FiGithub },
+    { href: SITE.leetcode, label: "LeetCode", icon: SiLeetcode },
     { href: SITE.linkedin, label: "LinkedIn", icon: FiLinkedin },
   ];
 

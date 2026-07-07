@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { FiGithub, FiLinkedin, FiFileText, FiX, FiDownload } from "react-icons/fi";
+import { SiLeetcode } from "react-icons/si";
 import { SITE } from "@/lib/site";
 
 import dynamic from "next/dynamic";
@@ -35,6 +36,13 @@ export default function FloatingSocials() {
       href: SITE.github,
       bg: "#2D2D2D",
       color: "#FFFFFF",
+    },
+    {
+      label: "LeetCode",
+      icon: SiLeetcode,
+      href: SITE.leetcode,
+      bg: "#FFA116",
+      color: "#2D2D2D",
     },
     {
       label: "LinkedIn",

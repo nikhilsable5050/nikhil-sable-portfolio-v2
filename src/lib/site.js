@@ -5,6 +5,7 @@ export const SITE = {
   phone: "+91 9172032542",
   location: "Pune / Pimpri-Chinchwad, India",
   github: "https://github.com/nikhilsable5050",
+  leetcode: "https://leetcode.com/nikhilsable5050/",
   linkedin: "https://www.linkedin.com/in/nikhil-sable-51b781283/",
   resumeUrl: "/nikhil.pdf",
   resumeFilename: "nikhil.pdf",
