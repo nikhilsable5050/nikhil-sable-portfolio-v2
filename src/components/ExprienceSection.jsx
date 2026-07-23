@@ -64,42 +64,6 @@ const experiences = [
       url: "https://github.com/nikhilsable5050/spring-boot-insights",
     },
   },
- {
-  title: "Personal Portfolio Website",
-  company: "Spring Boot + Thymeleaf",
-  period: "2026",
-  icon: FiGlobe,
-  color: "#F5F0FA",
-  iconBg: "#8A74C0",
-  highlights: [
-    "Built a responsive personal portfolio website using Spring Boot and Thymeleaf.",
-    "Implemented reusable Thymeleaf fragments for modular and maintainable UI components.",
-    "Showcased projects, technical skills, and practical experience in a structured layout.",
-    "Designed a clean and professional interface optimized for desktop and mobile devices.",
-  ],
-  link: {
-    text: "View Portfolio Code →",
-    url: "https://github.com/nikhilsable5050/nikhil-sable-portfolio",
-  },
-},
-{
-  title: "Personal Portfolio Website V2",
-  company: "Next.js + React.js + Tailwind CSS",
-  period: "2026",
-  icon: FiGlobe,
-  color: "#F0F7FF",
-  iconBg: "#4A6CF7",
-  highlights: [
-    "Developed a modern portfolio website using Next.js, React.js, and Tailwind CSS.",
-    "Added smooth scroll-based animations using Framer Motion for an interactive experience.",
-    "Implemented reusable components and centralized data management for easy content updates.",
-    "Optimized performance, responsiveness, and SEO to create a recruiter-friendly portfolio.",
-  ],
-  link: {
-    text: "View Portfolio V2 Code →",
-    url: "https://github.com/nikhilsable5050/nikhil-sable-portfolio-v2",
-  },
-},
 ];
 
 export default function ExperienceSection() {
