@@ -23,7 +23,7 @@ const details = [
   { icon: FiMapPin, title: "Location", content: SITE.location },
   { icon: FiMail, title: "Email", content: SITE.email },
   { icon: FiPhone, title: "Phone", content: SITE.phone },
-  { icon: FiBook, title: "Education", content: "B.E. COMP (2022–2026) · CGPA 8.05/10" },
+  { icon: FiBook, title: "Education", content: "B.E. COMP (2022–2026) · CGPA 8.50/10" },
 ];
 
 const skills = ["Spring Boot", "Java", "React.js", "Next.js", "Jenkins", "CI/CD", "MySQL", "MongoDB"];
