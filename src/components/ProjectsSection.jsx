@@ -110,6 +110,25 @@ const projects = [
     categories: ["fullstack"],
     cardColor: "#FFF8ED",
   },
+   {
+    id: "portfolio-v2",
+    title: "Personal Portfolio Website V2",
+    description:
+      "Modern portfolio website built with Next.js, React.js, Tailwind CSS, and Framer Motion with smooth animations.",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    image: "/v2.png",
+    githubLink:
+      "https://github.com/nikhilsable5050/nikhil-sable-portfolio-v2",
+    demoLink:
+      "https://nikhil-sable-portfolio-v2.vercel.app/",
+      categories: ["frontend"],
+      cardColor: "#FFF8ED",
+  },
   {
     id: "pizza-bill-generator",
     title: "Pizza Bill Generator – Java OOP Project",
@@ -161,6 +180,24 @@ const projects = [
     categories: ["backend"],
     cardColor: "#FAF0EE",
   },
+  {
+  id: "java-core-concepts",
+  title: "Java Core Concepts",
+  description:
+    "Comprehensive Java practice repository covering Object-Oriented Programming, Exception Handling, Collections Framework, Multithreading, Java 8 features, and core programming concepts through hands-on examples.",
+  technologies: [
+    "Java",
+    "OOP",
+    "Collections",
+    "Multithreading",
+    "Java 8",
+  ],
+  image: "/java.png",
+  githubLink:
+    "https://github.com/nikhilsable5050/java-core-concepts",
+  categories: ["backend", "java"],
+  cardColor: "#FFF8ED",
+},
   {
     id: "ai-background-remover",
     title: "AI Background Remover",
@@ -217,25 +254,6 @@ const projects = [
     cardColor: "#FFF7E6",
   },
   {
-    id: "portfolio-v2",
-    title: "Personal Portfolio Website V2",
-    description:
-      "Modern portfolio website built with Next.js, React.js, Tailwind CSS, and Framer Motion with smooth animations.",
-    technologies: [
-      "Next.js",
-      "React.js",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-    image: "/v2.png",
-    githubLink:
-      "https://github.com/nikhilsable5050/nikhil-sable-portfolio-v2",
-    demoLink:
-      "https://nikhil-sable-portfolio-v2.vercel.app/",
-      categories: ["frontend"],
-      cardColor: "#FFF8ED",
-  },
-  {
     id: "bank-customer-api",
     title: "Bank Customer Management API",
     description:
@@ -285,6 +303,24 @@ const projects = [
     categories: ["fullstack"],
     cardColor: "#F3F8FF",
   },
+   {
+  id: "personal-portfolio",
+  title: "Personal Portfolio Website",
+  description:
+    "Responsive personal portfolio website built with Spring Boot and Thymeleaf to showcase projects, technical skills, and practical experience with a clean, modular, and recruiter-friendly design.",
+  technologies: [
+    "Spring Boot",
+    "Thymeleaf",
+    "HTML",
+    "CSS",
+    "JavaScript",
+  ],
+  image: "/p1.png",
+  githubLink:
+    "https://github.com/nikhilsable5050/nikhil-sable-portfolio",
+  categories: ["backend", "portfolio"],
+  cardColor: "#F5F0FA",
+},
 ];
 
 function matchesTab(project, tab) {
