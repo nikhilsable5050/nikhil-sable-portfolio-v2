@@ -3,7 +3,7 @@
 A modern and responsive developer portfolio built with Next.js, React.js, Tailwind CSS, and Framer Motion to showcase my projects, skills, and experience.
 
 ## Live Demo
-https://nikhil-sable-portfolio-v2.vercel.app
+https://nikhilsable.vercel.app/
 
 ## Tech Stack
 
